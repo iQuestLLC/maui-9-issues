@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Maui9Issues"
+             x:Class="Maui9Issues.MainPage"
+             BackgroundColor="White"
+             x:DataType="vm:MainPageViewModel">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Label
+                Text="{Binding Amount, StringFormat='{0:c}'}"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                Margin="0,150,0,0" />
+
+            <Label
+                Text="The label above should be displaying currency value with a dollar sign"
+                TextColor="Black"
+                HorizontalTextAlignment="Center"
+                Margin="0,30,0,0" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:Maui9Issues"
+             x:Class="Maui9Issues.Page2"
+             BackgroundColor="White"
+             x:DataType="vm:Page2ViewModel">
+    <VerticalStackLayout>
+        
+        <Label 
+            Text="You should see 3 CollectionViews on this page"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center"
+            Margin="0,20,0,0" />
+
+        <!-- Favorite Colors -->
+        <CollectionView
+            ItemsSource="{Binding FavoriteColors}"
+            MinimumHeightRequest="120"
+            HorizontalOptions="Fill"
+            Margin="0,20,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="x:String">
+                    <Border
+                        BackgroundColor="Silver"
+                        HeightRequest="30"
+                        StrokeShape="RoundRectangle 3">
+                        <Label
+                            Text="{Binding .}"
+                            TextColor="Black"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Favorite Cars -->
+        <CollectionView
+            ItemsSource="{Binding FavoriteCars}"
+            MinimumHeightRequest="120"
+            HorizontalOptions="Fill"
+            Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="x:String">
+                    <Border
+                        BackgroundColor="Silver"
+                        HeightRequest="30"
+                        StrokeShape="RoundRectangle 3">
+                        <Label
+                            Text="{Binding .}"
+                            TextColor="Black"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center"/>
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <!-- Favorite Towns -->
+        <CollectionView
+            ItemsSource="{Binding FavoriteCars}"
+            MinimumHeightRequest="120"
+            HorizontalOptions="Fill"
+            VerticalOptions="FillAndExpand"
+            Margin="0,10,0,0">
+            <CollectionView.ItemTemplate>
+                <DataTemplate
+                    x:DataType="x:String">
+                    <Border
+                        BackgroundColor="Silver"
+                        HeightRequest="30"
+                        StrokeShape="RoundRectangle 3">
+                        <Label
+                            Text="{Binding .}"
+                            TextColor="Black"
+                            HorizontalTextAlignment="Start"
+                            VerticalTextAlignment="Center" />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+    </VerticalStackLayout>
+</ContentPage>
